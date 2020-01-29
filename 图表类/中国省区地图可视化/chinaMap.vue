@@ -1,5 +1,5 @@
 <template>
-  <div id="chinaMap">
+  <div id="chinaMap" :style="baseStyle">
   </div>
 </template>
 
@@ -12,6 +12,10 @@
   export default {
     name: "chinaMap",
     props: {
+      baseStyle: {
+        type: Object,
+        required: true
+      },
       title: {
         type: String,
         required: true
@@ -156,9 +160,4 @@
 </script>
 
 <style scoped>
-  #chinaMap {
-    padding-left: 125px;
-    width: 800px;
-    height: 600px;
-  }
 </style>
